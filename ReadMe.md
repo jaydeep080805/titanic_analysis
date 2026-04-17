@@ -40,12 +40,12 @@ It includes passenger information such as:
 ### 1. Initial data inspection
 First I loaded the dataset and inspected the columns and rows to see what data can be extracted. I also made sure to look at the null values that are contained in the dataset to ensure no incorrect correlations are found.
 
-![inital inspection](image/inital_inspection)
+![inital inspection](images/inital_inspection)
 
 ### 2. Survival by Sex
 A count plot was used to compare survival counts for male and female passengers.
 
-![Survival by sex plot](image/sex_comparison)
+![Survival by sex plot](images/sex_comparison)
 
 **finding** 
 It was clear that females had a much higher survival rate than males
@@ -53,7 +53,7 @@ It was clear that females had a much higher survival rate than males
 ### 3. Survival by Age Group
 The passengers were then split into age groups, seeing that most passengers are middle aged. Through analysis of this dataset, it was clear to see that younger passengers were much more likely to survive, with children having the highest survival rate and seniors having the lowest survival rate.
 
-![Age comparison plot](image/age_comparison)
+![Age comparison plot](images/age_comparison)
 
 **finding**
 survival rate 
@@ -62,12 +62,12 @@ children > adults > seniors
 ### 4. Survival by Passenger Class
 A barplot was used to find the survival rate across passenger class. It was clear to see that higher class passengers were priority, with there being more urgency placed on saving the female passengers, even in first class. 
 
-![Survival by class](image/class_survival)
+![Survival by class](images/class_survival)
 
 ### 5. Survival by passenger deck
 A lot of rows needed to be dropped in order to analyse the passenger deck data. Due to this, it wasn't clear if there was a significant correlation between passenger deck and their survival rate. 
 
-![Survival by passenger deck](image/deck_survival)
+![Survival by passenger deck](images/deck_survival)
 
 ## Key Skills Demonstrated
 - Loading and inspecting datasets
