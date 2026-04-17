@@ -3,7 +3,6 @@
 ### Contents
  - [Overview](#overview)
  - [Tools Used](#tools-used)
- - [Tools Used](#tools-used)
  - [Dataset](#dataset)
  - [Analysis](#analysis-performed)
  - [Key Skills](#key-skills-demonstrated)
