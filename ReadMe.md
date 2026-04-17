@@ -1,5 +1,15 @@
 # Titanic Analysis
 
+### Contents
+ - [Overview](#overview)
+ - [Tools Used](#tools-used)
+ - [Tools Used](#tools-used)
+ - [Dataset](#dataset)
+ - [Analysis](#analysis-performed)
+ - [Key Skills](#key-skills-demonstrated)
+ - [How to Run](#how-to-run)
+ - [Conclusion](#conclusion)
+
 ## Overview
 This project explores the Titanic dataset using Python, Pandas, Seaborn, and Matplotlib. The aim is to identify key patterns in passenger survival by examining factors such as sex, class, and age.
 
@@ -17,40 +27,51 @@ The dataset was loaded directly from Seaborn using:
 sns.load_dataset("titanic")
 ```
 
-It includes passenger information such as survival status, sex, age, and class.
+It includes passenger information such as:
+ - survival status
+ - sex
+ - age
+ - passenger class
+ - deck
+ - fare
+ - whether the passenger was alone
 
 ## Analysis Performed
-The notebook includes the following analysis:
+### 1. Initial data inspection
+First I loaded the dataset and inspected the columns and rows to see what data can be extracted. I also made sure to look at the null values that are contained in the dataset to ensure no incorrect correlations are found.
 
-### 1. Overall Survival Count
-A bar chart was created to compare the number of passengers who survived and did not survive.
-
-**Finding:** More passengers died than survived, with a rough ratio of around 5:3.
+![inital inspection](image/inital_inspection)
 
 ### 2. Survival by Sex
 A count plot was used to compare survival counts for male and female passengers.
 
-**Finding:** A much higher number of female passengers survived compared to male passengers.
+![Survival by sex plot](image/sex_comparison)
 
-### 3. Survival by Passenger Class
-A count plot and average survival rate chart were used to compare outcomes across first, second, and third class.
+**finding** 
+It was clear that females had a much higher survival rate than males
 
-**Finding:** First class passengers had the highest survival rate, second class passengers had a moderate survival rate, and third class passengers had the lowest survival rate.
+### 3. Survival by Age Group
+The passengers were then split into age groups, seeing that most passengers are middle aged. Through analysis of this dataset, it was clear to see that younger passengers were much more likely to survive, with children having the highest survival rate and seniors having the lowest survival rate.
 
-### 4. Survival by Age Group
-Passenger ages were grouped into ranges (0-10, 11-20, 21-30, etc.) using `pd.cut()`. A bar chart was then used to show the average survival percentage for each age group.
+![Age comparison plot](image/age_comparison)
 
-**Finding:** Children had the highest survival rates, while older passengers had lower survival rates overall.
+**finding**
+survival rate 
+children > adults > seniors
 
-### 5. Survival by Age Group and Sex
-The data was grouped by both age group and sex to compare average survival percentages across both variables.
+### 4. Survival by Passenger Class
+A barplot was used to find the survival rate across passenger class. It was clear to see that higher class passengers were priority, with there being more urgency placed on saving the female passengers, even in first class. 
 
-**Finding:** In most age groups, women had higher survival rates than men.
+![Survival by class](image/class_survival)
+
+### 5. Survival by passenger deck
+A lot of rows needed to be dropped in order to analyse the passenger deck data. Due to this, it wasn't clear if there was a significant correlation between passenger deck and their survival rate. 
+
+![Survival by passenger deck](image/deck_survival)
 
 ## Key Skills Demonstrated
 - Loading and inspecting datasets
 - Cleaning data by removing missing values
-- Creating grouped categories with `pd.cut()`
 - Using `groupby()` and `mean()` for aggregation
 - Creating clear visualisations with Seaborn
 - Drawing conclusions from real data
